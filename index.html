@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title>Swiper</title>
-    
 </head>
 <body>
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
     
+    <script>
+        // 기본 swiper 연결
+        const swiper = new Swiper('main', {
+            speed: 500, // 단위 : ms
+            loop: true, // default: flase
+            direction: 'horizontal', // default: horizontal
+            grabCursor: true, // default: false
+            slidesPerView: 'auto', // default: 'auto'
+            spaceBetween: 50, // 단위 : px
+            centersSlides: true //활성화 패널이 가운데로 위치
+        });
+    </script>
 </body>
 </html> 
