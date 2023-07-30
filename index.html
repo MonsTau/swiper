@@ -10,15 +10,64 @@
     <title>Swiper</title>
 </head>
 <body>
+    <h1>MONSTAULAB</h1>
     <main>
         <section class="swiper-wrapper">
-            <article class="swiper-slide">1</article>
-            <article class="swiper-slide">2</article>
-            <article class="swiper-slide">3</article>
-            <article class="swiper-slide">4</article>
-            <article class="swiper-slide">5</article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.png" alt="pic1">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, vero?</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.png" alt="pic2">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, vel!</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.png" alt="pic3">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, esse?</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.png" alt="pic4">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, fugit?</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.png" alt="pic5">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, obcaecati.</p>
+                    </div>
+                </div>
+            </article>
         </section>
+
+        <nav class="swiper-pagination"></nav>
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
     </main>
+
+    <footer>
+        2023 MONSTAULAB &copy; ALL RIGHT RESERVED.
+    </footer>
     
     <script>
         // 기본 swiper 연결
@@ -28,9 +77,25 @@
             direction: 'horizontal', // default: horizontal
             grabCursor: true, // default: false
             slidesPerView: 'auto', // default: 'auto'
-            spaceBetween: 50, // 단위 : px
-            centersSlides: true //활성화 패널이 가운데로 위치
+            spaceBetween: 30, // 단위 : px
+            centeredSlides: true, //활성화 패널이 가운데로 위치
+            pagination: {
+                el: '.swiper-pagination', //페이지 버튼 추가
+                //clickable: true, //페이지 이동클릭가능
+                type: 'fraction'
+            },
+            navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next"
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: -100,
+                depth: 400,
+                slideShadows: false,
+            }
         });
     </script>
 </body>
-</html> 
+</html>   
